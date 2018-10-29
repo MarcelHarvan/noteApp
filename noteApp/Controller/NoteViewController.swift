@@ -19,12 +19,12 @@ class NoteViewController: UITableViewController {
         dataService.delegate = self 
         
         DataService.instance.getAllNotes()
-        
-        navigationItem.title = "My Notes"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        
+        setupNavigationBarItems()
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataService.notes.count

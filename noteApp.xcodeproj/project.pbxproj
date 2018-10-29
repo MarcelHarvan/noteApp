@@ -16,6 +16,7 @@
 		EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3D2186833100B4B0D4 /* Note.swift */; };
 		EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3F2186834F00B4B0D4 /* DataService.swift */; };
 		EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C412186837500B4B0D4 /* Constrain.swift */; };
+		EBA85C44218696B800B4B0D4 /* NoteViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		EBA85C3D2186833100B4B0D4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EBA85C3F2186834F00B4B0D4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		EBA85C412186837500B4B0D4 /* Constrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrain.swift; sourceTree = "<group>"; };
+		EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				EBA85C182186804B00B4B0D4 /* AppDelegate.swift */,
 				EBA85C1A2186804B00B4B0D4 /* NoteViewController.swift */,
+				EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				EBA85C192186804B00B4B0D4 /* AppDelegate.swift in Sources */,
 				EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */,
 				EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */,
+				EBA85C44218696B800B4B0D4 /* NoteViewController+NavigationBar.swift in Sources */,
 				EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

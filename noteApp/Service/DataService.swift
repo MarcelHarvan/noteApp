@@ -82,4 +82,27 @@ class DataService {
             print(err)
         }
     }
+    
+    func deleteNote(id: Int){
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+        
+        guard let URL = URL(string: "\(BASE_API_URL)/\(id)") else {return}
+        var request = URLRequest(url: URL)
+        request.httpMethod = "DELETE"
+       
+        
+        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if error == nil {
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                print("URL Session Task Succeeded: HTTP \(statusCode)")
+               
+            } else {
+                print("URL Session Task Failed: \(error!.localizedDescription)")
+            }
+            
+        })
+        task.resume()
+        session.finishTasksAndInvalidate()
+    }
 }
