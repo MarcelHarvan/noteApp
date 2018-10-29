@@ -9,12 +9,45 @@
 import UIKit
 
 class NoteViewController: UITableViewController {
+    
+    var dataService = DataService.instance
+    
+    let cellId = "cellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        dataService.delegate = self 
+        
+        DataService.instance.getAllNotes()
+        
+        navigationItem.title = "My Notes"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataService.notes.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        cell.textLabel?.text = dataService.notes[indexPath.row]._note
+        
+        
+        return cell
     }
 
 
+}
+
+extension NoteViewController: DataServiceDelegate {
+    func notesLoaded() {
+        OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+        }
+    }
 }
 

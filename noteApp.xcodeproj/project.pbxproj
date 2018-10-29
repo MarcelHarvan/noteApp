@@ -13,6 +13,9 @@
 		EBA85C202186804C00B4B0D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C1F2186804C00B4B0D4 /* Assets.xcassets */; };
 		EBA85C232186804C00B4B0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C212186804C00B4B0D4 /* LaunchScreen.storyboard */; };
 		EBA85C2E2186804D00B4B0D4 /* noteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C2D2186804D00B4B0D4 /* noteAppTests.swift */; };
+		EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3D2186833100B4B0D4 /* Note.swift */; };
+		EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3F2186834F00B4B0D4 /* DataService.swift */; };
+		EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C412186837500B4B0D4 /* Constrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		EBA85C292186804D00B4B0D4 /* noteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA85C2D2186804D00B4B0D4 /* noteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteAppTests.swift; sourceTree = "<group>"; };
 		EBA85C2F2186804D00B4B0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA85C3D2186833100B4B0D4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		EBA85C3F2186834F00B4B0D4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EBA85C412186837500B4B0D4 /* Constrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 		EBA85C38218680EB00B4B0D4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EBA85C3F2186834F00B4B0D4 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		EBA85C3A2186811300B4B0D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBA85C3D2186833100B4B0D4 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		EBA85C3B2186811C00B4B0D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBA85C412186837500B4B0D4 /* Constrain.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -239,6 +248,9 @@
 			files = (
 				EBA85C1B2186804B00B4B0D4 /* NoteViewController.swift in Sources */,
 				EBA85C192186804B00B4B0D4 /* AppDelegate.swift in Sources */,
+				EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */,
+				EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */,
+				EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
