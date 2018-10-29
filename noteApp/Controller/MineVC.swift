@@ -8,11 +8,12 @@
 
 import UIKit
 
-class NoteViewController: UITableViewController {
+class MineVC: UITableViewController {
     
     var dataService = DataService.instance
-    
+    let noteAddController = Add_UpdateNoteVC()
     let cellId = "cellId"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class NoteViewController: UITableViewController {
         
         DataService.instance.getAllNotes()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        
+
         setupNavigationBarItems()
     }
     
@@ -33,17 +34,33 @@ class NoteViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
         cell.textLabel?.text = dataService.notes[indexPath.row]._note
-        
-        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            noteAddController.selectedNote = dataService.notes[indexPath.row]
+            noteAddController.inUpdateMode = true
+            navigationController?.pushViewController(noteAddController, animated: true)
+ 
+    }
+    
+    func showNote(note: Note) {
+        let noteAddController = Add_UpdateNoteVC()
+        navigationController?.pushViewController(noteAddController, animated: true)
 
-
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let id = dataService.notes[indexPath.row]._id else {return}
+            DataService.instance.deleteNote(id: id)
+            tableView.reloadData()
+        }
+    }
 }
 
-extension NoteViewController: DataServiceDelegate {
+extension MineVC: DataServiceDelegate {
     func notesLoaded() {
         OperationQueue.main.addOperation {
             self.tableView.reloadData()

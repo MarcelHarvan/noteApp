@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EBA85C192186804B00B4B0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C182186804B00B4B0D4 /* AppDelegate.swift */; };
-		EBA85C1B2186804B00B4B0D4 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C1A2186804B00B4B0D4 /* NoteViewController.swift */; };
+		EBA85C1B2186804B00B4B0D4 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C1A2186804B00B4B0D4 /* MineVC.swift */; };
 		EBA85C1E2186804B00B4B0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C1C2186804B00B4B0D4 /* Main.storyboard */; };
 		EBA85C202186804C00B4B0D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C1F2186804C00B4B0D4 /* Assets.xcassets */; };
 		EBA85C232186804C00B4B0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C212186804C00B4B0D4 /* LaunchScreen.storyboard */; };
@@ -16,7 +16,8 @@
 		EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3D2186833100B4B0D4 /* Note.swift */; };
 		EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C3F2186834F00B4B0D4 /* DataService.swift */; };
 		EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C412186837500B4B0D4 /* Constrain.swift */; };
-		EBA85C44218696B800B4B0D4 /* NoteViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */; };
+		EBA85C44218696B800B4B0D4 /* MineVC+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C43218696B800B4B0D4 /* MineVC+NavigationBar.swift */; };
+		EBA85C462186A59200B4B0D4 /* Add_UpdateNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C452186A59200B4B0D4 /* Add_UpdateNoteVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 /* Begin PBXFileReference section */
 		EBA85C152186804B00B4B0D4 /* noteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA85C182186804B00B4B0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBA85C1A2186804B00B4B0D4 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		EBA85C1A2186804B00B4B0D4 /* MineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		EBA85C1D2186804B00B4B0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBA85C1F2186804C00B4B0D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA85C222186804C00B4B0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,7 +44,8 @@
 		EBA85C3D2186833100B4B0D4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EBA85C3F2186834F00B4B0D4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		EBA85C412186837500B4B0D4 /* Constrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrain.swift; sourceTree = "<group>"; };
-		EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		EBA85C43218696B800B4B0D4 /* MineVC+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineVC+NavigationBar.swift"; sourceTree = "<group>"; };
+		EBA85C452186A59200B4B0D4 /* Add_UpdateNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_UpdateNoteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				EBA85C182186804B00B4B0D4 /* AppDelegate.swift */,
-				EBA85C1A2186804B00B4B0D4 /* NoteViewController.swift */,
-				EBA85C43218696B800B4B0D4 /* NoteViewController+NavigationBar.swift */,
+				EBA85C1A2186804B00B4B0D4 /* MineVC.swift */,
+				EBA85C43218696B800B4B0D4 /* MineVC+NavigationBar.swift */,
+				EBA85C452186A59200B4B0D4 /* Add_UpdateNoteVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,11 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA85C1B2186804B00B4B0D4 /* NoteViewController.swift in Sources */,
+				EBA85C1B2186804B00B4B0D4 /* MineVC.swift in Sources */,
 				EBA85C192186804B00B4B0D4 /* AppDelegate.swift in Sources */,
 				EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */,
 				EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */,
-				EBA85C44218696B800B4B0D4 /* NoteViewController+NavigationBar.swift in Sources */,
+				EBA85C44218696B800B4B0D4 /* MineVC+NavigationBar.swift in Sources */,
+				EBA85C462186A59200B4B0D4 /* Add_UpdateNoteVC.swift in Sources */,
 				EBA85C402186834F00B4B0D4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

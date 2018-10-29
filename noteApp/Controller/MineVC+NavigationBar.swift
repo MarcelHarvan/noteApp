@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension NoteViewController {
+extension MineVC {
     
     func setupNavigationBarItems(){
         navigationController?.navigationBar.backgroundColor = .blue
@@ -32,6 +32,7 @@ extension NoteViewController {
     }
     
     @objc func addNewNote(){
-        print("here")
+        noteAddController.selectedNote = nil
+        navigationController?.pushViewController(noteAddController, animated: true)
     }
 }
