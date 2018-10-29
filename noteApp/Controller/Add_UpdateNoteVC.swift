@@ -16,22 +16,19 @@ class Add_UpdateNoteVC: UIViewController {
     private let noteTextView: UITextView = {
        let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 18)
+        textView.textColor = .grayText
         textView.text = ""
+        textView.backgroundColor = .yellowBody
         return textView
     }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .yellowBody
         setupLayout()
 
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if inUpdateMode {
@@ -39,15 +36,11 @@ class Add_UpdateNoteVC: UIViewController {
         } else {
             noteTextView.text = ""
         }
+        view.reloadInputViews()
     }
     
     private func rightBarButton(){
         let addNoteButton = UIButton(type: .system)
-//        let addImage = UIImage(named: "add_button")
-//        addNoteButton.setImage(addImage, for: .normal)
-//        
-//
-//        addNoteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         addNoteButton.setTitle(NSLocalizedString("DONE", comment: ""), for: .normal)
         addNoteButton.addTarget(self, action: #selector(addUpdateNote), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addNoteButton)
@@ -120,4 +113,10 @@ extension UIView {
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
     }
+}
+
+extension UIColor {
+    static var yellowNavBar = UIColor(red: 255/255, green: 255/255, blue: 153/255, alpha: 1)
+    static var grayText = UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)
+    static var yellowBody = UIColor(red: 255/255, green: 255/255, blue: 204/255, alpha: 1)
 }

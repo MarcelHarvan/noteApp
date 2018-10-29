@@ -144,10 +144,5 @@ class DataService {
             completion(false)
             print(err)
         }
-       
-        
-        
-        
-    }
-    
+    }  
 }

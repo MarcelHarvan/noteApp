@@ -21,6 +21,7 @@ class MineVC: UITableViewController {
         
         DataService.instance.getAllNotes()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.backgroundColor = .yellowBody
 
         setupNavigationBarItems()
     }
@@ -35,6 +36,9 @@ class MineVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.textLabel?.text = dataService.notes[indexPath.row]._note
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
+        cell.textLabel?.textColor = .grayText
+        cell.backgroundColor = .yellowBody
         return cell
     }
     

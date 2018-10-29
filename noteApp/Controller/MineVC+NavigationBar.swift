@@ -11,7 +11,6 @@ import UIKit
 extension MineVC {
     
     func setupNavigationBarItems(){
-        navigationController?.navigationBar.backgroundColor = .blue
         navigationController?.navigationBar.isTranslucent = false
         navigationItemTitle()
         rightBarButton()

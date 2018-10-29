@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let navController = UINavigationController(rootViewController: MineVC())
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.barTintColor = .yellowNavBar
+  
+        navController.navigationBar.tintColor = .black
+        
         window?.rootViewController = navController
         
         return true
