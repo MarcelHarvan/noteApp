@@ -18,7 +18,7 @@ extension MineVC {
     }
     
     private func navigationItemTitle(){
-        navigationItem.title = "My Notes"
+        navigationItem.title = NSLocalizedString("My Notes", comment: "")
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

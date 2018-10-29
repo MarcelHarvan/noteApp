@@ -48,7 +48,7 @@ class Add_UpdateNoteVC: UIViewController {
 //        
 //
 //        addNoteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        addNoteButton.setTitle("DONE", for: .normal)
+        addNoteButton.setTitle(NSLocalizedString("DONE", comment: ""), for: .normal)
         addNoteButton.addTarget(self, action: #selector(addUpdateNote), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addNoteButton)
     }
