@@ -13,7 +13,6 @@ class MineVC: UITableViewController {
     var dataService = DataService.instance
     let noteAddController = Add_UpdateNoteVC()
     let cellId = "cellId"
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,7 @@ class MineVC: UITableViewController {
 
         setupNavigationBarItems()
     }
-    
-    
+  
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataService.notes.count
@@ -46,13 +44,11 @@ class MineVC: UITableViewController {
             noteAddController.selectedNote = dataService.notes[indexPath.row]
             noteAddController.inUpdateMode = true
             navigationController?.pushViewController(noteAddController, animated: true)
- 
     }
     
     func showNote(note: Note) {
         let noteAddController = Add_UpdateNoteVC()
         navigationController?.pushViewController(noteAddController, animated: true)
-
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

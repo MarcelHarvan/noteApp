@@ -19,6 +19,7 @@
 		EBA85C44218696B800B4B0D4 /* MineVC+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C43218696B800B4B0D4 /* MineVC+NavigationBar.swift */; };
 		EBA85C462186A59200B4B0D4 /* Add_UpdateNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C452186A59200B4B0D4 /* Add_UpdateNoteVC.swift */; };
 		EBA85C512187AF8F00B4B0D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA85C532187AF8F00B4B0D4 /* Localizable.strings */; };
+		EBA85C552187E42D00B4B0D4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA85C542187E42D00B4B0D4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EBA85C4D2187AEBE00B4B0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBA85C4E2187AEBE00B4B0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBA85C522187AF8F00B4B0D4 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBA85C542187E42D00B4B0D4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA85C412186837500B4B0D4 /* Constrain.swift */,
+				EBA85C542187E42D00B4B0D4 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				EBA85C1B2186804B00B4B0D4 /* MineVC.swift in Sources */,
 				EBA85C192186804B00B4B0D4 /* AppDelegate.swift in Sources */,
 				EBA85C3E2186833100B4B0D4 /* Note.swift in Sources */,
+				EBA85C552187E42D00B4B0D4 /* Extensions.swift in Sources */,
 				EBA85C422186837500B4B0D4 /* Constrain.swift in Sources */,
 				EBA85C44218696B800B4B0D4 /* MineVC+NavigationBar.swift in Sources */,
 				EBA85C462186A59200B4B0D4 /* Add_UpdateNoteVC.swift in Sources */,
@@ -476,6 +480,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BRZXF8YH4L;
 				INFOPLIST_FILE = noteAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +501,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BRZXF8YH4L;
 				INFOPLIST_FILE = noteAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

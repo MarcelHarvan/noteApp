@@ -14,7 +14,6 @@ protocol DataServiceDelegate: class {
 
 class DataService {
     static let instance = DataService()
-    
     weak var delegate: DataServiceDelegate?
     var notes = [Note]()
     
@@ -25,8 +24,6 @@ class DataService {
         guard let URL = URL(string: BASE_API_URL) else {return}
         var request = URLRequest(url: URL)
         request.httpMethod = "GET"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if error == nil {
                 let statusCode = (response as! HTTPURLResponse).statusCode
@@ -38,7 +35,6 @@ class DataService {
             } else {
                 print("URL Session Task Failed: \(error!.localizedDescription)")
             }
-            
         })
         task.resume()
         session.finishTasksAndInvalidate()
@@ -73,7 +69,6 @@ class DataService {
                     print("URL Session Task Failed: \(String(describing: error?.localizedDescription))")
                     completion(false)
                 }
-                
             })
             task.resume()
             session.finishTasksAndInvalidate()
