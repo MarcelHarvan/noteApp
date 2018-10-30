@@ -17,6 +17,7 @@ class DataService {
     weak var delegate: DataServiceDelegate?
     var notes = [Note]()
     
+    // get all the nots from the server
     func getAllNotes() {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -40,6 +41,7 @@ class DataService {
         session.finishTasksAndInvalidate()
     }
     
+    // add new note
     func addNewNote(note: String, completion: @escaping callback) {
         let json: [String: Any] = [
             "title": note
@@ -78,6 +80,7 @@ class DataService {
         }
     }
     
+    // delete note
     func deleteNote(id: Int){
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -101,6 +104,7 @@ class DataService {
         session.finishTasksAndInvalidate()
     }
     
+    // update note
     func updateNote(note: String, id: Int, completion: @escaping callback){
         let json: [String: Any] = [
             "title": note
@@ -131,7 +135,6 @@ class DataService {
                     print("URL Session Task Failed: \(String(describing: error?.localizedDescription))")
                     completion(false)
                 }
-                
             })
             task.resume()
             session.finishTasksAndInvalidate()

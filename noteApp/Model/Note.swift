@@ -22,7 +22,7 @@ struct Note {
                     var newNote = Note()
                     newNote._id = note["id"] as? Int
                     newNote._note = note["title"] as? String
-                    print(newNote._id, newNote._note)
+//                    print(newNote._id, newNote._note)
                     notes.append(newNote)
                 }
             }

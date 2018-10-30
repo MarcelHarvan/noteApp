@@ -9,7 +9,7 @@
 import UIKit
 
 extension MineVC {
-    
+    // NavBar setup
     func setupNavigationBarItems(){
         navigationController?.navigationBar.isTranslucent = false
         navigationItemTitle()
@@ -30,6 +30,7 @@ extension MineVC {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addNoteButton)
     }
     
+    // add new note functiopn pushes into Add_UpdateNoteVC
     @objc func addNewNote(){
         noteAddController.selectedNote = nil
         navigationController?.pushViewController(noteAddController, animated: true)

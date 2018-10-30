@@ -23,6 +23,7 @@ class MineVC: UITableViewController {
         tableView.backgroundColor = .yellowBody
 
         setupNavigationBarItems()
+        // function of setupNavigationBarItems() is in extension of MainVC
     }
   
     

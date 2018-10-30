@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// view extension
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor?,
                 left: NSLayoutXAxisAnchor?,
@@ -41,7 +41,7 @@ extension UIView {
         }
     }
 }
-
+// color extension
 extension UIColor {
     static var yellowNavBar = UIColor(red: 255/255, green: 255/255, blue: 153/255, alpha: 1)
     static var grayText = UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)

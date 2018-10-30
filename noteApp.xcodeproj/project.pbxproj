@@ -98,9 +98,7 @@
 				EBA85C3A2186811300B4B0D4 /* Model */,
 				EBA85C392186810D00B4B0D4 /* Controller */,
 				EBA85C38218680EB00B4B0D4 /* Service */,
-				EBA85C1F2186804C00B4B0D4 /* Assets.xcassets */,
 				EBA85C242186804C00B4B0D4 /* Info.plist */,
-				EBA85C532187AF8F00B4B0D4 /* Localizable.strings */,
 			);
 			path = noteApp;
 			sourceTree = "<group>";
@@ -144,8 +142,10 @@
 		EBA85C3B2186811C00B4B0D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBA85C1F2186804C00B4B0D4 /* Assets.xcassets */,
 				EBA85C412186837500B4B0D4 /* Constrain.swift */,
 				EBA85C542187E42D00B4B0D4 /* Extensions.swift */,
+				EBA85C532187AF8F00B4B0D4 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

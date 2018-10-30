@@ -13,6 +13,7 @@ class Add_UpdateNoteVC: UIViewController {
     var selectedNote: Note?
     var inUpdateMode = false
     
+    // note text filed
     private let noteTextView: UITextView = {
        let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 18)
@@ -30,6 +31,7 @@ class Add_UpdateNoteVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        // loading note from the tableview if inUpdateMode = true
         if inUpdateMode {
             noteTextView.text = selectedNote?._note
         } else {
@@ -45,6 +47,7 @@ class Add_UpdateNoteVC: UIViewController {
     }
     
     @objc func addUpdateNote(){
+    // updating existing note
         if inUpdateMode {
             guard let noteId = selectedNote?._id else {return}
             DataService.instance.updateNote(note: noteTextView.text, id: noteId, completion: {Success in
@@ -56,6 +59,8 @@ class Add_UpdateNoteVC: UIViewController {
             })
             inUpdateMode = false
             self.navigationController?.popToRootViewController(animated: true)
+            
+            // create new note
         } else {
             DataService.instance.addNewNote(note: noteTextView.text, completion: {Success in
                 if Success {
@@ -69,6 +74,7 @@ class Add_UpdateNoteVC: UIViewController {
         }
     }
 
+    // .anchor -> extension of UIView
    private func setupLayout(){
         rightBarButton()
         view.addSubview(noteTextView)
